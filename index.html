@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eren Hatipoglu — Portfolio</title>
-<style>
-:root{--bg:#fff;--text:#111;--link:#0b5ed7;--muted:#666;--border:#ddd;}
-  *{box-sizing:border-box;}
-  body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;}
-  header, main, footer{max-width:900px;margin:0 auto;padding:12px 16px;}
-  header{border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;}
-  nav a{margin-right:12px;text-decoration:none;color:var(--link);font-weight:bold;}
-  nav a[aria-current="page"]{text-decoration:underline;}
-  h1{font-size:24px;margin:0;}
-  h2{font-size:20px;margin:0 0 8px;}
-  .page{display:none;padding:16px 0;border-bottom:1px solid var(--border);}
-  .page:last-of-type{border-bottom:0;}
-  .muted{color:var(--muted);}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
-  .card{border:1px solid var(--border);border-radius:8px;padding:12px;}
-  .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
-  .links a{border:1px solid var(--border);padding:6px 10px;text-decoration:none;color:var(--link);border-radius:4px;font-size:14px;}
-  .video-container{max-width:700px;width:100%;margin:10px 0 20px;}
-  .video-container video{width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:6px;}
-  pre{overflow:auto;background:#f7f7f7;border:1px solid var(--border);border-radius:6px;padding:10px;font-size:13px;}
-  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
-  details summary{cursor:pointer;color:var(--link);font-weight:bold;margin:8px 0;}
-  img{max-width:100%;border:1px solid var(--border);border-radius:6px;margin-top:10px;}
-  footer{border-top:1px solid var(--border);margin-top:24px;padding-top:16px;font-size:14px;}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eren Hatipoğlu — Portfolio</title>
+  <style>
+    :root{--bg:#fff;--text:#111;--link:#0b5ed7;--muted:#666;--border:#ddd;}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;}
+    header, main, footer{max-width:900px;margin:0 auto;padding:12px 16px;}
+    header{border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    nav a{margin-right:12px;text-decoration:none;color:var(--link);font-weight:bold;}
+    nav a[aria-current="page"]{text-decoration:underline;}
+    h1{font-size:24px;margin:0;}
+    h2{font-size:20px;margin:0 0 8px;}
+    .page{display:none;padding:16px 0;border-bottom:1px solid var(--border);}
+    .page:last-of-type{border-bottom:0;}
+    .muted{color:var(--muted);}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+    .card{border:1px solid var(--border);border-radius:8px;padding:12px;background:#fff;}
+    .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+    .links a{border:1px solid var(--border);padding:6px 10px;text-decoration:none;color:var(--link);border-radius:4px;font-size:14px;}
+    .video-container{max-width:700px;width:100%;margin:10px 0 20px;}
+    pre{overflow:auto;background:#f7f7f7;border:1px solid var(--border);border-radius:6px;padding:10px;font-size:13px;white-space:pre;}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;display:block;}
+    details summary{cursor:pointer;color:var(--link);font-weight:bold;margin:8px 0;}
+    footer{border-top:1px solid var(--border);margin-top:24px;padding-top:16px;font-size:14px;}
+    a.small-link{display:inline-block;margin-top:8px;color:var(--link);text-decoration:none;}
+  </style>
 </head>
 <body>
-<header>
-  <div><strong>Eren Hatipoglu</strong></div>
-  <nav>
-    <a href="#home" id="nav-home">Home</a>
-    <a href="#projects" id="nav-projects">Projects</a>
-    <a href="#big-ideas" id="nav-big-ideas">Big Ideas</a>
-    <a href="#documentation" id="nav-documentation">Documentation</a>
-  </nav>
-</header>
+  <header>
+    <div><strong>Eren Hatipoğlu</strong></div>
+    <nav aria-label="Primary">
+      <a href="#about" id="nav-about">About</a>
+      <a href="#projects" id="nav-projects">Projects</a>
+      <a href="#contact" id="nav-contact">Contact</a>
+    </nav>
+  </header>
 
-<main>
-  <section id="home" class="page" data-title="Home — Eren Hatipoglu">
-    <h2>Home</h2>
-    <p class="muted">10. sınıf öğrencisi · Python / Web · Tasarım ve bilim meraklısı</p>
-    <p>Merhaba! Ben Eren. Yazılım, tasarım ve bilim projeleriyle ilgileniyorum. Yeni şeyler öğrenmeyi çok seviyorum ve sosyal etki yaratan projelere odaklanıyorum.</p>
-  </section>
+  <main>
+    <section id="about" class="page" data-title="About — Eren Hatipoğlu">
+      <h2>About</h2>
+      <p class="muted">10. sınıf öğrencisi · Python / Web · Tasarım ve bilim meraklısı</p>
+      <p>Merhaba! Ben Eren. Yazılım, tasarım ve bilim projeleriyle ilgileniyorum. Yeni şeyler öğrenmeyi seviyorum ve küçük, anlaşılır projeler geliştirmeye odaklanıyorum.</p>
+    </section>
 
-  <section id="projects" class="page" data-title="Projects — Eren Hatipoglu">
-   <article class="card">
-  
-    <div class="grid">
-     <article class="card">
-  <h3>4-Bit Binary Converter</h3>
-  <p>This SwiftUI project displays a 4-bit binary representation of numbers from 0 to 15. When the value exceeds 15, it resets back to 0. Each bit is visually represented by colored rectangles — green for 1 and gray for 0.</p>
-  <pre><code>
-import SwiftUI
+    <section id="projects" class="page" data-title="Projects — Eren Hatipoğlu">
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <!-- 4-Bit Binary Converter -->
+        <article class="card">
+          <h3>4-Bit Binary Converter</h3>
+          <p>This SwiftUI project displays a 4-bit binary representation of numbers from 0 to 15. When the value exceeds 15, it resets back to 0. Each bit is visually represented by colored rectangles — green for 1 and gray for 0.</p>
+          <details>
+            <summary>Show Swift code</summary>
+            <pre><code class="language-swift">import SwiftUI
 
 struct ContentView: View {
     @State var id = 0
@@ -85,112 +85,96 @@ struct ContentView: View {
         .padding()
     }
 }
-  </code></pre>
-  <a href="https://github.com/erenhatipoglu-sudo" target="_blank">View on GitHub</a>
-</article>
-     <h3>4-Bit Binary Converter</h3>
-  <p>A Swift project that converts decimal numbers (0–15) into 4-bit binary format.</p>
 
-  <details>
-    <summary>Show Swift code</summary>
-    <pre><code class="language-swift">
-func decimalToBinary(_ number: Int) -> String {
-    var remainder = number
-    if remainder < 0 {
-        remainder = 0
-    } else if remainder > 15 {
-        remainder = remainder % 16
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
-    let powers = [8, 4, 2, 1]
-    var bits = ""
-    for power in powers {
-        if remainder >= power {
-            bits += "1"
-            remainder -= power
-        } else {
-            bits += "0"
-        }
-    }
-    return bits
-}
+}</code></pre>
+          </details>
+          <a class="small-link" href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
 
-var id = 0
-for _ in 1...20 {
-    print("Decimal: \(id), Binary: \(decimalToBinary(id))")
-    id += 1
-    if id > 15 {
-        id = 0
-    }
-}
-    </code></pre>
-  </details>
+        <!-- Scratch Tic-Tac-Toe -->
+        <article class="card">
+          <h3>Scratch Tic-Tac-Toe</h3>
+          <p>A classic Tic-Tac-Toe game made in Scratch. Two players play on the same screen; the game checks rows, columns and diagonals and announces the winner.</p>
+          <div class="links">
+            <a href="https://scratch.mit.edu/projects/1212300434" target="_blank" rel="noopener">Play on Scratch</a>
+          </div>
+          <details>
+            <summary>Documentation</summary>
+            <pre><code><strong>Purpose:</strong> Simple two-player Tic-Tac-Toe to learn event handling and game logic.
+<strong>How it works:</strong>
+- 9 tiles toggle between X and O when clicked.
+- The game checks rows, columns and diagonals for a win.
+- When a win or draw occurs, input stops and the result is shown.
 
-  <p><strong>Explanation:</strong>  
-  This program displays both decimal and binary values for IDs from 0 to 15.  
-  When the number exceeds 15, it resets to 0 (overflow behavior).</p>
-</article>
-   <article class="card">
-  <h3>Scratch Tic-Tac-Toe</h3>
-  <p>The Tic-Tac-Toe game I built in Scratch.</p>
-  <div class="links">
-    <a href="https://scratch.mit.edu/projects/1212300434" target="_blank" rel="noopener">Play on Scratch</a>
-  </div>
-</article>
-    <h2>Projects</h2>
-      <!-- Calculator -->
-      <article class="card">
-        <h3>SwiftUI Calculator</h3>
-        <p>Simple Calculator i did with Swift code.</p>
-        <details>
-          <summary>Show Swift code</summary>
-          <pre><code class="language-swift">
-import SwiftUI
+<strong>Next steps:</strong>
+- Add win/draw counters and reset button.
+- Implement player vs CPU mode and sounds.
+</code></pre>
+          </details>
+        </article>
+
+        <!-- Calculator -->
+        <article class="card">
+          <h3>SwiftUI Calculator</h3>
+          <p>Simple Calculator built with SwiftUI: takes two inputs and performs +, −, ×, ÷ operations.</p>
+          <details>
+            <summary>Show Swift code</summary>
+            <pre><code class="language-swift">import SwiftUI
 struct ContentView: View {
-@State var n1=""
-@State var n2=""
-@State var result=0
-var body: some View {
+    @State var n1 = ""
+    @State var n2 = ""
+    @State var result = 0
+
+    var body: some View {
         VStack {
             Text("Simple Calculator")
-            TextField("Enter first number", text:$n1)
-            TextField("Enter second number", text:$n2)  
-            HStack (spacing:15) {  
+            TextField("Enter first number", text: $n1)
+                .textFieldStyle(.roundedBorder)
+                .keyboardType(.numberPad)
+            TextField("Enter second number", text: $n2)
+                .textFieldStyle(.roundedBorder)
+                .keyboardType(.numberPad)
+            HStack(spacing: 15) {
                 Button("+") {
-                    if let a=Int(n1), let b=Int(n2) { result=a+b }
+                    if let a = Int(n1), let b = Int(n2) { result = a + b }
                 }
-                Button("-") {    
-                    if let a=Int(n1), let b=Int(n2) { result=a-b }
+                Button("-") {
+                    if let a = Int(n1), let b = Int(n2) { result = a - b }
                 }
                 Button("*") {
-                    if let a=Int(n1), let b=Int(n2) { result=a*b }
+                    if let a = Int(n1), let b = Int(n2) { result = a * b }
                 }
-                Button("/") {     
-                    if let a=Int(n1), let b=Int(n2) { result=a/b }
-                }     
+                Button("/") {
+                    if let a = Int(n1), let b = Int(n2), b != 0 { result = a / b }
+                }
             }
             .buttonStyle(.borderedProminent)
             Text("Result: \(result)")
         }
+        .padding()
     }
-}
-          </code></pre>
-        </details>
-      </article>
+}</code></pre>
+          </details>
+          <a class="small-link" href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
 
-      <!-- Portrait -->
-      <article class="card">
-        <h3>SwiftUI Portrait</h3>
-        <p>Portrait i did with Swift code.</p>
-        <details>
-          <summary>Show Swift code</summary>
-          <pre><code class="language-swift">
-import SwiftUI
-struct ContentView: View {    
+        <!-- Portrait -->
+        <article class="card">
+          <h3>SwiftUI Portrait</h3>
+          <p>A stylized portrait made from basic shapes (Capsule, Rectangle) in SwiftUI.</p>
+          <details>
+            <summary>Show Swift code</summary>
+            <pre><code class="language-swift">import SwiftUI
+struct ContentView: View {
     var body: some View {
-        ZStack {   
+        ZStack {
             Capsule()
                 .frame(width: 170, height:250)
-                .foregroundStyle(Color.brown)   
+                .foregroundStyle(Color.brown)
             Capsule()
                 .frame(width:125, height:100)
                 .offset(y:-105)
@@ -221,105 +205,103 @@ struct ContentView: View {
                 .offset(x:39)
         }
     }
-}
-          </code></pre>
-        </details>
-      </article>
+}</code></pre>
+          </details>
+          <a class="small-link" href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
 
-      <!-- Clock -->
-      <article class="card">
-        <h3>SwiftUI Clock</h3>
-        <p>Clock i did with Swift code.</p>
-        <details>
-          <summary>Show Swift code</summary>
-          <pre><code class="language-swift">
-import SwiftUI
+        <!-- Clock -->
+        <article class="card">
+          <h3>SwiftUI Clock</h3>
+          <p>Interactive clock built with SwiftUI. Tap the face to advance minute segments; changes appearance for day/night.</p>
+          <details>
+            <summary>Show Swift code</summary>
+            <pre><code class="language-swift">import SwiftUI
+
 struct ContentView: View {
     @State var hour = 13
-    @State var minuteSeg = 0   
+    @State var minuteSeg = 0
+
     var body: some View {
-        VStack(spacing:16){
+        VStack(spacing: 16) {
             Text("Time: \(hour)")
-            ZStack{
-                if hour<12 {
-                    Circle().fill(Color.yellow).opacity(0.8).overlay(Circle().stroke(.white,lineWidth:4)).frame(width:200,height:200)
+            ZStack {
+                if hour < 12 {
+                    Circle()
+                        .fill(Color.yellow)
+                        .opacity(0.8)
+                        .overlay(Circle().stroke(.white, lineWidth: 4))
+                        .frame(width: 200, height: 200)
                 } else {
-                    Circle().fill(Color.blue).opacity(0.8).overlay(Circle().stroke(.white,lineWidth:4)).frame(width:200,height:200)
+                    Circle()
+                        .fill(Color.blue)
+                        .opacity(0.8)
+                        .overlay(Circle().stroke(.white, lineWidth: 4))
+                        .frame(width: 200, height: 200)
                 }
-                Group{
-                    if minuteSeg==0 { Rectangle().fill(.white).frame(width:5,height:80).offset(x:0,y:-43) }
-                    else if minuteSeg==1 { Rectangle().fill(.white).frame(width:80,height:5).offset(x:43,y:0) }
-                    else if minuteSeg==2 { Rectangle().fill(.white).frame(width:5,height:80).offset(x:0,y:43) }
-                    else { Rectangle().fill(.white).frame(width:80,height:5).offset(x:-43,y:0) }
+
+                Group {
+                    if minuteSeg == 0 {
+                        Rectangle().fill(.white).frame(width: 5, height: 80).offset(x: 0, y: -43)
+                    } else if minuteSeg == 1 {
+                        Rectangle().fill(.white).frame(width: 80, height: 5).offset(x: 43, y: 0)
+                    } else if minuteSeg == 2 {
+                        Rectangle().fill(.white).frame(width: 5, height: 80).offset(x: 0, y: 43)
+                    } else {
+                        Rectangle().fill(.white).frame(width: 80, height: 5).offset(x: -43, y: 0)
+                    }
                 }
-                Rectangle().fill(.white).frame(width:8,height:40).offset(x:0,y:-25)
-                Circle().fill(.white).frame(width:10,height:10)
+
+                Rectangle().fill(.white).frame(width: 8, height: 40).offset(x: 0, y: -25)
+                Circle().fill(.white).frame(width: 10, height: 10)
             }
-            .onTapGesture{
-                minuteSeg+=1
-                if minuteSeg==4 { minuteSeg=0; hour+=1 }
-                if hour==24 { hour=0 }
+            .onTapGesture {
+                minuteSeg += 1
+                if minuteSeg == 4 { minuteSeg = 0; hour += 1 }
+                if hour == 24 { hour = 0 }
             }
         }
+        .padding()
     }
-}
-          </code></pre>
-        </details>
-      </article>
+}</code></pre>
+          </details>
+          <a class="small-link" href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">View on GitHub</a>
+        </article>
 
+      </div>
+    </section>
+
+    <section id="contact" class="page" data-title="Contact — Eren Hatipoğlu">
+      <h2>Contact</h2>
+      <p>You can find my projects on <a href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <a href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://scratch.mit.edu/projects/1212300434" target="_blank" rel="noopener">Scratch</a>
     </div>
-  </section>
+  </footer>
 
-  <section id="big-ideas" class="page" data-title="Big Ideas — Eren Hatipoglu">
-    <h2>Big Ideas</h2>
-    <p>Projeleri geliştirirken edindiğim deneyimler ve öğrenilenler burada olacak.</p>
-  </section>
+  <script>
+    // Simple hash-based page router (shows sections by id)
+    const pages = document.querySelectorAll('.page');
+    const navLinks = document.querySelectorAll('nav a');
 
-  <section id="documentation" class="page" data-title="Docs — Eren Hatipoglu">
-    <h2>Documentation</h2>
-    <p>Projeler ve kodların nasıl yazıldığı hakkında bilgiler burada yer alacak.</p>
-    <article class="card">
-  <h3>Scratch Tic-Tac-Toe — Documentation</h3>
-  <p><strong>Purpose:</strong> Simple two-player Tic-Tac-Toe game built in Scratch for learning game logic and event handling.</p>
-  <p><strong>How it works:</strong></p>
-  <ul>
-    <li>9 tiles toggle between X and O when clicked.</li>
-    <li>The game checks rows, columns, and diagonals to determine a winner.</li>
-    <li>Highlights the winning line and stops further input once the game ends.</li>
-  </ul>
-  <p><strong>Next steps / Improvements:</strong></p>
-  <ul>
-    <li>Add win/draw counters.</li>
-    <li>Include a reset button and scoreboard.</li>
-    <li>Implement a player vs CPU mode.</li>
-    <li>Add sound effects and refine the code for readability.</li>
-  </ul>
-  </section>
+    function showPage(id) {
+      pages.forEach(p => p.style.display = 'none');
+      const page = document.getElementById(id);
+      if (page) {
+        page.style.display = 'block';
+        document.title = page.dataset.title || 'Eren Hatipoğlu — Portfolio';
+      }
+      navLinks.forEach(link => link.removeAttribute('aria-current'));
+      document.querySelector(`nav a[href="#${id}"]`)?.setAttribute('aria-current','page');
+    }
 
-</main>
-
-<footer>
-  <div class="links">
-    <a href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">GitHub</a>
-    <a href="#" target="_blank" rel="noopener">Scratch</a>
-  </div>
-</footer>
-
-<script>
-const pages=document.querySelectorAll('.page');
-const navLinks=document.querySelectorAll('nav a');
-function showPage(id){
-  pages.forEach(p=>p.style.display='none');
-  const page=document.getElementById(id);
-  if(page){
-    page.style.display='block';
-    document.title=page.dataset.title||'Eren Hatipoglu — Portfolio';
-  }
-  navLinks.forEach(link=>link.removeAttribute('aria-current'));
-  document.querySelector(`nav a[href="#${id}"]`)?.setAttribute('aria-current','page');
-}
-window.addEventListener('hashchange',()=>showPage(location.hash.slice(1)));
-window.addEventListener('DOMContentLoaded',()=>showPage(location.hash.slice(1)||'home'));
-</script>
+    window.addEventListener('hashchange', () => showPage(location.hash.slice(1)));
+    window.addEventListener('DOMContentLoaded', () => showPage(location.hash.slice(1) || 'about'));
+  </script>
 </body>
 </html>
