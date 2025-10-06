@@ -52,6 +52,42 @@
    <article class="card">
   
     <div class="grid">
+     <article class="card">
+  <h3>4-Bit Binary Converter</h3>
+  <p>This SwiftUI project displays a 4-bit binary representation of numbers from 0 to 15. When the value exceeds 15, it resets back to 0. Each bit is visually represented by colored rectangles — green for 1 and gray for 0.</p>
+  <pre><code>
+import SwiftUI
+
+struct ContentView: View {
+    @State var id = 0
+    let maxID = 15
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("Decimal: \(id)")
+            HStack(spacing: 10) {
+                ForEach(0..<4) { i in
+                    let bit = (id >> (3 - i)) & 1
+                    Rectangle()
+                        .fill(bit == 1 ? Color.green : Color.gray)
+                        .frame(width: 40, height: 60)
+                }
+            }
+            HStack(spacing: 20) {
+                Button("Enroll (+1)") {
+                    id = (id == maxID) ? 0 : (id + 1)
+                }
+                Button("Reset (0)") {
+                    id = 0
+                }
+            }
+        }
+        .padding()
+    }
+}
+  </code></pre>
+  <a href="https://github.com/erenhatipoglu-sudo" target="_blank">View on GitHub</a>
+</article>
      <h3>4-Bit Binary Converter</h3>
   <p>A Swift project that converts decimal numbers (0–15) into 4-bit binary format.</p>
 
