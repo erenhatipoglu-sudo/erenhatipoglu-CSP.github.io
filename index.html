@@ -35,29 +35,20 @@
     <nav aria-label="Primary">
       <a href="#about" id="nav-about">About</a>
       <a href="#projects" id="nav-projects">Projects</a>
+      <a href="#documentation" id="nav-documentation">Documentation</a>
       <a href="#contact" id="nav-contact">Contact</a>
     </nav>
   </header>
 
   <main>
+    <!-- ABOUT -->
     <section id="about" class="page" data-title="About — Eren Hatipoğlu">
       <h2>About</h2>
       <p class="muted">10. sınıf öğrencisi · Python / Web · Tasarım ve bilim meraklısı</p>
       <p>Merhaba! Ben Eren. Yazılım, tasarım ve bilim projeleriyle ilgileniyorum. Yeni şeyler öğrenmeyi seviyorum ve küçük, anlaşılır projeler geliştirmeye odaklanıyorum.</p>
     </section>
 
-    
-    <section id="projects" class="page" data-title="Projects — Eren Hatipoğlu">
-      <h2>Documentation</h2>
-      <div class="grid">
-        
-<article class="card">
-  <h3>Big Ideas 2.1-2.4</h3>
-  <p>This is about Big Ideas 2</p>
-   <p>This reflection covers everything that is included in Big Ideas 2. The most interesting part for me was the 4 bit binary sequence. Its interesting how it works and overall i think i learned the topic pretty well.</p>
-  <a href="https://www.veed.io/view/8dfb70d8-80c5-4cf9-ba58-0208772255a6?source=Folder+New+Flow+Option&panel=share" target="_blank" class="button">Watch Video</a>
-</article>
-        
+    <!-- PROJECTS -->
     <section id="projects" class="page" data-title="Projects — Eren Hatipoğlu">
       <h2>Projects</h2>
       <div class="grid">
@@ -283,6 +274,41 @@ struct ContentView: View {
       </div>
     </section>
 
+    <!-- DOCUMENTATION -->
+    <section id="documentation" class="page" data-title="Documentation — Eren Hatipoğlu">
+      <h2>Documentation</h2>
+
+      <article class="card">
+        <h3>Scratch Tic-Tac-Toe — Documentation</h3>
+        <p><strong>Purpose:</strong> Simple two-player Tic-Tac-Toe built in Scratch to practice event handling and game logic.</p>
+        <p><strong>How it works:</strong></p>
+        <ul>
+          <li>9 tiles toggle between X and O when clicked.</li>
+          <li>The game checks rows, columns and diagonals for a win.</li>
+          <li>On win or draw, the game stops input and shows result.</li>
+        </ul>
+        <p><strong>Next steps:</strong></p>
+        <ul>
+          <li>Add win/draw counters and reset button.</li>
+          <li>Implement player vs CPU mode and sound effects.</li>
+        </ul>
+        <p><a href="https://scratch.mit.edu/projects/1212300434" target="_blank" rel="noopener">Launch project on Scratch</a></p>
+      </article>
+
+      <article class="card">
+        <h3>SwiftUI Projects — Notes</h3>
+        <p>Short notes and tips used while building the SwiftUI projects:</p>
+        <ul>
+          <li>Use `@State` for simple local UI state (player, board cells, counters).</li>
+          <li>Split views into small subviews to keep code readable (TileView, BoardView, etc.).</li>
+          <li>Prefer `ForEach` for repeated elements (the 4-bit boxes or grid tiles).</li>
+          <li>Test edge cases: division by zero, full-board draw, overflow (4-bit wrap).</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="page" data-title="Contact — Eren Hatipoğlu">
       <h2>Contact</h2>
       <p>You can find my projects on <a href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">GitHub</a>.</p>
