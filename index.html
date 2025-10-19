@@ -214,4 +214,8 @@ struct ContentView: View {
       document.querySelector(`nav a[href="#${id}"]`)?.setAttribute('aria-current','page');
     }
 
-    window.addEvent
+    window.addEventListener('hashchange', () => showPage(location.hash.slice(1)));
+    window.addEventListener('DOMContentLoaded', () => showPage(location.hash.slice(1) || 'about'));
+  </script>
+</body>
+</html>
