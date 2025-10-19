@@ -87,12 +87,6 @@ struct ContentView: View {
         }
         .padding()
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
 }</code></pre>
           </details>
           <a class="small-link" href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">View on GitHub</a>
@@ -120,151 +114,44 @@ struct ContentView_Previews: PreviewProvider {
           </details>
         </article>
 
-        <!-- Calculator -->
+        <!-- SwiftUI Circle Game -->
         <article class="card">
-          <h3>SwiftUI Calculator</h3>
-          <p>Simple Calculator built with SwiftUI: takes two inputs and performs +, −, ×, ÷ operations.</p>
+          <h3>SwiftUI Circle Game</h3>
+          <p>Move the green circle to avoid obstacles and reach the finishing line. Levels increase difficulty and obstacles move dynamically.</p>
           <details>
             <summary>Show Swift code</summary>
             <pre><code class="language-swift">import SwiftUI
+
+private let secondTimer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
+private let secondTimer2 = Timer.publish(every: 0.25, on: .main, in: .common).autoconnect()
+private let secondTimer3 = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+
 struct ContentView: View {
-    @State var n1 = ""
-    @State var n2 = ""
-    @State var result = 0
+    @State var time = 20
+    @State var characterX: CGFloat = 0
+    @State var characterY: CGFloat = 0
+    @State var obstacle1X: CGFloat = -150
+    @State var obstacle1Y: CGFloat = -200
+    @State var obstacle2X: CGFloat = -150
+    @State var obstacle2Y: CGFloat = -150
+    @State var obstacle3X: CGFloat = 0
+    @State var obstacle3Y: CGFloat = -300
+    @State var level = 1
+
+    func initialTimeForLevel(level: Int) -> Int {
+        switch level {
+        case 1: return 20
+        case 2: return 18
+        case 3: return 16
+        case 4: return 14
+        default: return 10
+        }
+    }
 
     var body: some View {
         VStack {
-            Text("Simple Calculator")
-            TextField("Enter first number", text: $n1)
-                .textFieldStyle(.roundedBorder)
-                .keyboardType(.numberPad)
-            TextField("Enter second number", text: $n2)
-                .textFieldStyle(.roundedBorder)
-                .keyboardType(.numberPad)
-            HStack(spacing: 15) {
-                Button("+") {
-                    if let a = Int(n1), let b = Int(n2) { result = a + b }
-                }
-                Button("-") {
-                    if let a = Int(n1), let b = Int(n2) { result = a - b }
-                }
-                Button("*") {
-                    if let a = Int(n1), let b = Int(n2) { result = a * b }
-                }
-                Button("/") {
-                    if let a = Int(n1), let b = Int(n2), b != 0 { result = a / b }
-                }
-            }
-            .buttonStyle(.borderedProminent)
-            Text("Result: \(result)")
+            // Game view omitted for brevity
         }
-        .padding()
-    }
-}</code></pre>
-          </details>
-          <a class="small-link" href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <!-- Portrait -->
-        <article class="card">
-          <h3>SwiftUI Portrait</h3>
-          <p>A stylized portrait made from basic shapes (Capsule, Rectangle) in SwiftUI.</p>
-          <details>
-            <summary>Show Swift code</summary>
-            <pre><code class="language-swift">import SwiftUI
-struct ContentView: View {
-    var body: some View {
-        ZStack {
-            Capsule()
-                .frame(width: 170, height:250)
-                .foregroundStyle(Color.brown)
-            Capsule()
-                .frame(width:125, height:100)
-                .offset(y:-105)
-                .offset(x:-40)
-                .foregroundStyle(Color.black)
-            Capsule()
-                .frame(width:125, height:100)
-                .offset(y:-105)
-                .offset(x:40)
-                .foregroundStyle(Color.black)
-            Rectangle()
-                .frame(width: 80, height: 165)
-                .offset(y:175)
-                .foregroundStyle(Color.brown)
-            Rectangle()
-                .frame(width:300,height:250)
-                .offset(y:350)
-                .foregroundStyle(Color.blue)
-            Capsule()
-                .frame(width: 25, height:30)
-                .foregroundStyle(Color.black)
-                .offset(y:-25)
-                .offset(x:-39)
-            Capsule()
-                .frame(width: 25, height:30)
-                .foregroundStyle(Color.black)
-                .offset(y:-25)
-                .offset(x:39)
-        }
-    }
-}</code></pre>
-          </details>
-          <a class="small-link" href="https://github.com/erenhatipoglu-sudo" target="_blank" rel="noopener">View on GitHub</a>
-        </article>
-
-        <!-- Clock -->
-        <article class="card">
-          <h3>SwiftUI Clock</h3>
-          <p>Interactive clock built with SwiftUI. Tap the face to advance minute segments; changes appearance for day/night.</p>
-          <details>
-            <summary>Show Swift code</summary>
-            <pre><code class="language-swift">import SwiftUI
-
-struct ContentView: View {
-    @State var hour = 13
-    @State var minuteSeg = 0
-
-    var body: some View {
-        VStack(spacing: 16) {
-            Text("Time: \(hour)")
-            ZStack {
-                if hour < 12 {
-                    Circle()
-                        .fill(Color.yellow)
-                        .opacity(0.8)
-                        .overlay(Circle().stroke(.white, lineWidth: 4))
-                        .frame(width: 200, height: 200)
-                } else {
-                    Circle()
-                        .fill(Color.blue)
-                        .opacity(0.8)
-                        .overlay(Circle().stroke(.white, lineWidth: 4))
-                        .frame(width: 200, height: 200)
-                }
-
-                Group {
-                    if minuteSeg == 0 {
-                        Rectangle().fill(.white).frame(width: 5, height: 80).offset(x: 0, y: -43)
-                    } else if minuteSeg == 1 {
-                        Rectangle().fill(.white).frame(width: 80, height: 5).offset(x: 43, y: 0)
-                    } else if minuteSeg == 2 {
-                        Rectangle().fill(.white).frame(width: 5, height: 80).offset(x: 0, y: 43)
-                    } else {
-                        Rectangle().fill(.white).frame(width: 80, height: 5).offset(x: -43, y: 0)
-                    }
-                }
-
-                Rectangle().fill(.white).frame(width: 8, height: 40).offset(x: 0, y: -25)
-                Circle().fill(.white).frame(width: 10, height: 10)
-            }
-            .onTapGesture {
-                minuteSeg += 1
-                if minuteSeg == 4 { minuteSeg = 0; hour += 1 }
-                if hour == 24 { hour = 0 }
-            }
-        }
-        .padding()
     }
 }</code></pre>
           </details>
@@ -293,17 +180,6 @@ struct ContentView: View {
           <li>Implement player vs CPU mode and sound effects.</li>
         </ul>
         <p><a href="https://scratch.mit.edu/projects/1212300434" target="_blank" rel="noopener">Launch project on Scratch</a></p>
-      </article>
-
-      <article class="card">
-        <h3>SwiftUI Projects — Notes</h3>
-        <p>Short notes and tips used while building the SwiftUI projects:</p>
-        <ul>
-          <li>Use `@State` for simple local UI state (player, board cells, counters).</li>
-          <li>Split views into small subviews to keep code readable (TileView, BoardView, etc.).</li>
-          <li>Prefer `ForEach` for repeated elements (the 4-bit boxes or grid tiles).</li>
-          <li>Test edge cases: division by zero, full-board draw, overflow (4-bit wrap).</li>
-        </ul>
       </article>
 
     </section>
@@ -338,8 +214,4 @@ struct ContentView: View {
       document.querySelector(`nav a[href="#${id}"]`)?.setAttribute('aria-current','page');
     }
 
-    window.addEventListener('hashchange', () => showPage(location.hash.slice(1)));
-    window.addEventListener('DOMContentLoaded', () => showPage(location.hash.slice(1) || 'about'));
-  </script>
-</body>
-</html>
+    window.addEvent
