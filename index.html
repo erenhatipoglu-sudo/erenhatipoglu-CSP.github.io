@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
@@ -48,6 +48,18 @@
       <p>Merhaba! Ben Eren. Yazılım, tasarım ve bilim projeleriyle ilgileniyorum. Yeni şeyler öğrenmeyi seviyorum ve küçük, anlaşılır projeler geliştirmeye odaklanıyorum.</p>
     </section>
 
+    
+    <section id="projects" class="page" data-title="Projects — Eren Hatipoğlu">
+      <h2>Documentation</h2>
+      <div class="grid">
+        
+<article class="card">
+  <h3>Big Ideas 2.1-2.4</h3>
+  <p>This is about Big Ideas 2</p>
+   <p>This reflection covers everything that is included in Big Ideas 2. The most interesting part for me was the 4 bit binary sequence. Its interesting how it works and overall i think i learned the topic pretty well.</p>
+  <a href="https://www.veed.io/view/8dfb70d8-80c5-4cf9-ba58-0208772255a6?source=Folder+New+Flow+Option&panel=share" target="_blank" class="button">Watch Video</a>
+</article>
+        
     <!-- PROJECTS -->
     <section id="projects" class="page" data-title="Projects — Eren Hatipoğlu">
       <h2>Projects</h2>
@@ -64,7 +76,7 @@
 struct ContentView: View {
     @State var id = 0
     let maxID = 15
-    
+
     var body: some View {
         VStack(spacing: 20) {
             Text("Decimal: \(id)")
@@ -299,9 +311,9 @@ struct ContentView: View {
         <h3>SwiftUI Projects — Notes</h3>
         <p>Short notes and tips used while building the SwiftUI projects:</p>
         <ul>
-          <li>Use @State for simple local UI state (player, board cells, counters).</li>
+          <li>Use `@State` for simple local UI state (player, board cells, counters).</li>
           <li>Split views into small subviews to keep code readable (TileView, BoardView, etc.).</li>
-          <li>Prefer ForEach for repeated elements (the 4-bit boxes or grid tiles).</li>
+          <li>Prefer `ForEach` for repeated elements (the 4-bit boxes or grid tiles).</li>
           <li>Test edge cases: division by zero, full-board draw, overflow (4-bit wrap).</li>
         </ul>
       </article>
@@ -335,7 +347,7 @@ struct ContentView: View {
         document.title = page.dataset.title || 'Eren Hatipoğlu — Portfolio';
       }
       navLinks.forEach(link => link.removeAttribute('aria-current'));
-      document.querySelector(nav a[href="#${id}"])?.setAttribute('aria-current','page');
+      document.querySelector(`nav a[href="#${id}"]`)?.setAttribute('aria-current','page');
     }
 
     window.addEventListener('hashchange', () => showPage(location.hash.slice(1)));
