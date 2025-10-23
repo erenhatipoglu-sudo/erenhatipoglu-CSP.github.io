@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>func decimalToBinary(_ number: Int)-&gt; String {
+    var remainder  = number 
+    if remainder &lt; 0 {
+        remainder = 0
+    } else if remainder &gt; 15 {
+        remainder = remainder % 16
+    }
+    let powers = [8,4,2,1]
+    var bits = ""
+    for power in powers {
+        if remainder &gt;= power {
+            bits += "1"
+            remainder -= power 
+        } else {
+            bits += "0"
+        }
+    }; return bits
+}
+var id = 0
+for _ in 1...20 {
+    print("Decimal: \(id), Binary: \(decimalToBinary(id))")
+    id += 1
+    if id &gt; 15 {
+        id = 0
+    }
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 565}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
