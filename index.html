@@ -53,6 +53,67 @@
       <h2>Projects</h2>
       <div class="grid">
 
+        <article class="card">
+  <h3>Initials</h3>
+  <p>Bu proje, SwiftUI kullanarak “E H” baş harflerini renkli dairelerle çizen bir grid tasarımı oluşturur.</p>
+  <details>
+    <a href="https://github.com/erenhatipoglu-sudo/erenhatipoglu-CSP.github.io/tree/main/Initials.swiftpm" target="_blank" class="button">View on GitHub</a>
+    <summary>View Code</summary>
+    <pre><code>
+// My initials are E H
+import SwiftUI
+
+struct ContentView: View {
+    let circleSize: CGFloat = 20
+    let spacing: CGFloat = 5
+    
+    var body: some View {
+        VStack(spacing: spacing) {
+            ForEach(0..<10) { row in
+                HStack(spacing: spacing) {
+                    // Letter E
+                    ForEach(0..<10) { col in
+                        if isE(row: row, col: col) {
+                            Circle()
+                                .fill(.blue)
+                                .frame(width: circleSize, height: circleSize)
+                        } else {
+                            Color.clear.frame(width: circleSize, height: circleSize)
+                        }
+                    }
+                    
+                    Spacer().frame(width: 30)
+                    
+                    // Letter H
+                    ForEach(0..<10) { col in
+                        if isH(row: row, col: col) {
+                            Circle()
+                                .fill(.red)
+                                .frame(width: circleSize, height: circleSize)
+                        } else {
+                            Color.clear.frame(width: circleSize, height: circleSize)
+                        }
+                    }
+                }
+            }
+        }
+        .padding()
+        .background(Color.black)
+    }
+    
+    func isE(row: Int, col: Int) -> Bool {
+        col == 0 || row == 0 || row == 4 || row == 9
+    }
+    
+    func isH(row: Int, col: Int) -> Bool {
+        col == 0 || col == 9 || row == 4
+    }
+}
+    </code></pre>
+  </details>
+</article>
+
+
         
 <article class="card">
   <h3>Hot Chocolate Project</h3>
