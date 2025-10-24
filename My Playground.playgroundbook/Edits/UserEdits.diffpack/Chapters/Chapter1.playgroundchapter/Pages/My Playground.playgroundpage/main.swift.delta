@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>func hotChocolateMachine() {
+    var temperature = 20
+    var totalChange = 0
+
+    for minute in 1...20 {
+        temperature += 5
+        totalChange += 5
+
+        if temperature &lt; 50 {
+            print("Minute \(minute): \(temperature)°C → The drink is still cold.")
+        } else if temperature &gt;= 50 &amp;&amp; temperature &lt;= 70 {
+            print("Minute \(minute): \(temperature)°C → The drink is ready to serve!")
+        } else if temperature &gt; 70 &amp;&amp; temperature &lt;= 80 {
+            print("Minute \(minute): \(temperature)°C → Too hot! Wait before drinking.")
+        } else {
+            print("⚠ Machine auto-stop activated!")
+            break
+        }
+    }
+
+    print("Total temperature change: \(totalChange)°C")
+}
+
+// Call the function
+hotChocolateMachine()
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 769}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
