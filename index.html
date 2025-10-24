@@ -53,6 +53,66 @@
       <h2>Projects</h2>
       <div class="grid">
 
+        <article class="card">
+  <h3>Hot Chocolate Project</h3>
+  <p>Bu proje, sıcak çikolata makinesinin sıcaklık değişimini ve durum mesajlarını simüle eden bir algoritmayı gösterir.</p>
+  <pre><code>
+PROCEDURE HotChocolateMachine
+    START
+        SET temperature = 20
+        SET totalChange = 0
+
+        FOR minute FROM 1 TO 20
+            SET temperature = temperature + 5
+            SET totalChange = totalChange + 5
+
+            IF temperature < 50 THEN
+                DISPLAY "Minute " + minute + ": " + temperature + "°C → The drink is still cold."
+            ELSE IF temperature >= 50 AND temperature <= 70 THEN
+                DISPLAY "Minute " + minute + ": " + temperature + "°C → The drink is ready to serve!"
+            ELSE IF temperature > 70 AND temperature <= 80 THEN
+                DISPLAY "Minute " + minute + ": " + temperature + "°C → Too hot! Wait before drinking."
+            ELSE
+                DISPLAY "Minute " + minute + ": " + temperature + "°C → ⚠ Machine auto-stop activated!"
+                BREAK
+            END IF
+        END FOR
+
+        DISPLAY "Total temperature change: " + totalChange + "°C"
+    END
+END PROCEDURE
+              SWİFT CODE:
+
+              func hotChocolateMachine() {
+    var temperature = 20
+    var totalChange = 0
+
+    for minute in 1...20 {
+        temperature += 5
+        totalChange += 5
+
+        if temperature < 50 {
+            print("Minute \(minute): \(temperature)°C → The drink is still cold.")
+        } else if temperature >= 50 && temperature <= 70 {
+            print("Minute \(minute): \(temperature)°C → The drink is ready to serve!")
+        } else if temperature > 70 && temperature <= 80 {
+            print("Minute \(minute): \(temperature)°C → Too hot! Wait before drinking.")
+        } else {
+            print("⚠ Machine auto-stop activated!")
+            break
+        }
+    }
+
+    print("Total temperature change: \(totalChange)°C")
+}
+
+// Call the function
+hotChocolateMachine()
+
+  </code></pre>
+</article>
+
+
         <!-- Data Compression Unit 2.2 -->
 <article class="card">
   <h3>Data Compression Unit 2.2</h3>
