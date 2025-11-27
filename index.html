@@ -57,10 +57,54 @@
       <div class="project-card">
     <h3>Pixel Painter</h3>
     <p>This is a 10x10 pixel painter. You write a number down from 0-99, and click paint, then it will paint the square you selected.</p>
+    
+    <!-- GitHub link -->
     <a href="https://github.com/erenhatipoglu-sudo/erenhatipoglu-CSP.github.io/tree/main/Pixel%20Painter.swiftpm" target="_blank">
         View on GitHub
     </a>
+    
+    <!-- Pseudocode toggle -->
+    <button onclick="document.getElementById('pseudocode').style.display = 
+        document.getElementById('pseudocode').style.display === 'none' ? 'block' : 'none';">
+        View Pseudocode
+    </button>
+    
+    <pre id="pseudocode" style="display:none; background:#f4f4f4; padding:10px; border-radius:5px;">
+START PROGRAM
+
+CREATE a list named colors with 100 items
+SET all colors to gray
+
+CREATE a variable userInput (string)
+CREATE a variable message (string)
+
+DISPLAY a 10×10 grid:
+    FOR row from 0 to 9:
+        FOR col from 0 to 9:
+            cellIndex = row * 10 + col
+            DRAW a square using colors[cellIndex]
+
+DISPLAY a text field for userInput
+DISPLAY a button labeled "Paint"
+
+WHEN button is clicked:
+    CALL changeColor()
+
+FUNCTION changeColor():
+    CONVERT userInput to number → num
+
+    IF num is between 0 and 99:
+        SET colors[num] = blue
+        SET message = ""          // clear any errors
+    ELSE:
+        SET message = "Invalid input"
+
+SHOW message on screen if not empty
+
+END PROGRAM
+    </pre>
 </div>
+
 
 
 
