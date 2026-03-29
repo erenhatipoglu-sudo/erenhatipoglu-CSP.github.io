@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import Foundation
+
+// 1. DATA INPUT
+let database = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+let targetID = 23
+
+var low = 0
+var high = database.count - 1
+var steps = 0
+var found = false
+
+print("SYSTEM: Starting Binary Search Protocol...")
+print("Target ID: \(targetID)")
+print("------------------------------")
+
+while low &lt;= high &amp;&amp; !found {
+    steps += 1
+    let mid = (low + high) / 2
+
+    print("Step \(steps): Checking Index [\(mid)] -&gt; Value: \(database[mid])")
+
+    if database[mid] == targetID {
+        found = true
+        print()
+        print("SUCCESS: User ID found at Index \(mid)")
+        print("EFFICIENCY: Operation completed in \(steps) steps.")
+    } else if database[mid] &lt; targetID {
+        low = mid + 1
+    } else {
+        high = mid - 1
+    }
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 768}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
